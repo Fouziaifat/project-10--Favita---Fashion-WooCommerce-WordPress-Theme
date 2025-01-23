@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper {
+  color: #1b1b1b;
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #header-page .content-head {
+    background: url(https://info.bingomore.com/wordpress/favita/assets/images/bg-header.jpg)
+      no-repeat 85% top;
+  }
+}
+#header-page .content-head {
+  background: url(https://info.bingomore.com/wordpress/favita/assets/images/bg-header.jpg)
+    no-repeat right bottom;
+  padding-bottom: 65px;
+  padding: 0 45px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+.main-logo {
+  padding-bottom: 392px;
+  text-align: left;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  .main-logo h1 {
+    padding-bottom: 40px;
+  }
+}
+.main-logo h1 {
+  margin: 0;
+  padding-bottom: 173px;
+  padding-top: 50px;
+}
+.wrapper a:hover,
+.wrapper a:focus {
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #86ba09;
+}
+
+.main-logo h1 a {
+  display: inline-block;
+}
+.wrapper a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #1b1b1b;
+}
+a:focus,
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+.wrapper img {
+  max-width: 100%;
+}
+.main-logo h1 .button a {
+  display: inline-block;
+}
+
+.main-logo .button a {
+  margin-top: -30px;
+  float: right;
+  padding: 0 36px;
+  display: inline-block;
+  color: white;
+  background: #fa6755;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 26px;
+}
+.main-logo h2 {
+  color: #1b1b1b;
+  margin: 0;
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 3.9px;
+  padding-bottom: 20px;
+}
+.main-logo .subtitle {
+  color: #1b1b1b;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.625px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.main-logo {
+  padding-bottom: 392px;
+  text-align: left;
+}
+.main-logo .button2 a {
+  margin-top: 109px;
+  padding: 0 26px;
+  display: inline-block;
+  background: #fa6755;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.section-1 {
+  padding-bottom: 60px;
+}
+.list-home {
+  padding-top: 105px;
+  position: relative;
+}
+.section-1 .title-section {
+  font-size: 45px;
+  font-weight: 700;
+  color: #fa6755;
+  line-height: 50px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .col-sm-1,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9 {
+    float: left;
+  }
+}
+
+.section-1:not(.bg) .wrapper-img-1 {
+  border: 1px solid #ebebeb;
+  box-shadow: 0 0 8px 1px rgba(144, 144, 144, 0.2);
+}
+
+.wrapper-img-1 {
+  margin-bottom: 40px;
+}
+.wrapper-img a img,
+.wrapper-img-1 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.wrapper-img a {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+.wrapper a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #1b1b1b;
+}
+.wrapper-img a img,
+.wrapper-img-1 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.wrapper img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.col-sm-4 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+}
+/* card before section */
+.wrapper-img a:before {
+  position: absolute;
+  content: "";
+  background: url(https://info.bingomore.com/wordpress/favita/assets/images/next.jpg)
+    no-repeat;
+  left: calc(50% - 24px);
+  top: calc(50% - 50px);
+  height: 48px;
+  width: 48px;
+  line-height: 50px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.wrapper-img a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #121212;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrapper-img div {
+  padding: 15px 0;
+}
+.wrapper-img .font-second {
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .col-sm-3 {
+    width: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-sm-1,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9 {
+    float: left;
+  }
+}
+.wrapper-section2 {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  padding: 35px 15px;
+  margin-bottom: 21px;
+  box-shadow: 0 0 10px 1px rgba(220, 220, 220, 0.4);
+  min-height: 265px;
+}
