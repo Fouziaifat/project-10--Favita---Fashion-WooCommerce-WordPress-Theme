@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #f5f5f5;
   font-family: "Poppins", sans-serif;
   width: 100%;
   height: 100vh;
@@ -13,12 +12,7 @@ body {
   color: #1b1b1b;
   font-family: "Poppins", sans-serif;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
-  #header-page .content-head {
-    background: url(https://info.bingomore.com/wordpress/favita/assets/images/bg-header.jpg)
-      no-repeat 85% top;
-  }
-}
+
 #header-page .content-head {
   background: url(https://info.bingomore.com/wordpress/favita/assets/images/bg-header.jpg)
     no-repeat right bottom;
@@ -42,16 +36,12 @@ body {
   text-align: left;
   text-align: center;
 }
-@media (max-width: 1199px) {
-  .main-logo h1 {
-    padding-bottom: 40px;
-  }
-}
 .main-logo h1 {
   margin: 0;
   padding-bottom: 173px;
   padding-top: 50px;
 }
+
 .wrapper a:hover,
 .wrapper a:focus {
   outline: none;
@@ -108,6 +98,7 @@ a:hover {
   letter-spacing: 3.9px;
   padding-bottom: 20px;
 }
+
 .main-logo .subtitle {
   color: #1b1b1b;
   font-size: 25px;
@@ -134,13 +125,17 @@ a:hover {
   text-decoration: none;
   font-size: 14px;
 }
+
+/* section 1.................................... */
 .section-1 {
-  padding-bottom: 60px;
+  text-align: center;
 }
+
 .list-home {
   padding-top: 105px;
   position: relative;
 }
+
 .section-1 .title-section {
   font-size: 45px;
   font-weight: 700;
@@ -149,41 +144,131 @@ a:hover {
   margin-top: 20px;
   margin-bottom: 70px;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
+
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-@media (min-width: 768px) {
-  .col-sm-4 {
-    width: 33.33333333%;
-  }
-}
-@media (min-width: 768px) {
-  .col-sm-1,
-  .col-sm-10,
-  .col-sm-11,
-  .col-sm-12,
-  .col-sm-2,
-  .col-sm-3,
-  .col-sm-4,
-  .col-sm-5,
-  .col-sm-6,
-  .col-sm-7,
-  .col-sm-8,
-  .col-sm-9 {
-    float: left;
-  }
+
+.row-contant {
+  text-align: center;
+  position: relative;
+  min-height: 1px;
+  padding: 0 15px;
 }
 
 .section-1:not(.bg) .wrapper-img-1 {
   border: 1px solid #ebebeb;
   box-shadow: 0 0 8px 1px rgba(144, 144, 144, 0.2);
+  margin-bottom: 40px;
+  transition: all 0.5s ease; /* this line for animation*/
 }
 
-.wrapper-img-1 {
-  margin-bottom: 40px;
+/* this is for the card par hover karne se jo effect aa raha hai uske liye hai   */
+
+.wrapper-img a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #121212;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
+
+.wrapper-img a:before {
+  position: absolute;
+  content: "";
+  left: calc(50% - 24px);
+  top: calc(50% - 50px);
+  height: 48px;
+  width: 48px;
+  line-height: 50px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: url(https://info.bingomore.com/wordpress/favita/assets/images/next.jpg)
+    no-repeat;
+}
+
+.wrapper-img a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #121212;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+}
+.wrapper-img:hover a:before,
+.wrapper-img-1:hover a:before {
+  opacity: 1;
+  top: calc(50% - 24px);
+}
+.wrapper-img:hover a:after,
+.wrapper-img-1:hover a:after {
+  opacity: 0.3;
+}
+.wrapper-img div {
+  padding: 15px 0;
+}
+
+.wrapper-img .font-second {
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@keyframes fadelnUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+.wrapper-img a {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+
+.wrapper-section2 {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  padding: 35px 15px;
+  margin-bottom: 21px;
+  box-shadow: 0 0 10px 1px rgba(220, 220, 220, 0.4);
+  min-height: 265px;
+}
+
 .wrapper-img a img,
 .wrapper-img-1 {
   -webkit-transition: all 0.5s ease;
@@ -192,7 +277,22 @@ a:hover {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
+.wrapper a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #1b1b1b;
+}
+.wrapper a:hover,
+.wrapper a:focus {
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #86ba09;
+}
 .animated {
   -webkit-animation-duration: 1s;
 
@@ -217,104 +317,13 @@ a:hover {
   }
 }
 
-.wrapper-img a {
-  display: inline-block;
-  width: 100%;
-  vertical-align: top;
-  position: relative;
-}
-.wrapper a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #1b1b1b;
-}
-.wrapper-img a img,
-.wrapper-img-1 {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.row-icon {
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.wrapper img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-.col-sm-4 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  text-align: center;
-}
-/* card before section */
-.wrapper-img a:before {
-  position: absolute;
-  content: "";
-  background: url(https://info.bingomore.com/wordpress/favita/assets/images/next.jpg)
-    no-repeat;
-  left: calc(50% - 24px);
-  top: calc(50% - 50px);
-  height: 48px;
-  width: 48px;
-  line-height: 50px;
-  z-index: 1;
-  opacity: 0;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.wrapper-img a:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  background: #121212;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.wrapper-img div {
-  padding: 15px 0;
-}
-.wrapper-img .font-second {
-  font-weight: 400;
-  margin-top: 30px;
-  margin-bottom: 40px;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-@media (min-width: 768px) {
-  .col-sm-3 {
-    width: 25%;
-  }
-}
-
-@media (min-width: 768px) {
-  .col-sm-1,
-  .col-sm-10,
-  .col-sm-11,
-  .col-sm-12,
-  .col-sm-2,
-  .col-sm-3,
-  .col-sm-4,
-  .col-sm-5,
-  .col-sm-6,
-  .col-sm-7,
-  .col-sm-8,
-  .col-sm-9 {
-    float: left;
-  }
-}
 .wrapper-section2 {
   background: #fff;
   border: 1px solid #ebebeb;
@@ -322,4 +331,130 @@ a:hover {
   margin-bottom: 21px;
   box-shadow: 0 0 10px 1px rgba(220, 220, 220, 0.4);
   min-height: 265px;
+}
+.wrapper img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.wrapper-section2 .content h3 {
+  margin-top: 28px;
+  margin-bottom: 23px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #252525;
+  text-transform: uppercase;
+}
+.wrapper-section2 .content p {
+  color: #acacac;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+/* footer */
+#footer-page {
+  padding-top: 600px;
+  padding-bottom: 27px;
+  background: url(https://info.bingomore.com/wordpress/favita/assets/images/bg-footer.png)
+    no-repeat top;
+  text-align: center;
+}
+
+.footer-page .title-footer {
+  margin-top: 170px;
+  font-weight: 700;
+  font-size: 32px;
+  color: #1b1b1b;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.footer-page .btn-link-ft a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 25px;
+  background: #fa6755;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+.copyright {
+  color: #1b1b1b;
+  font-family: "Poppins", sans-serif;
+}
+.copyright a {
+  color: #fa6755;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* media quri */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #header-page .content-head {
+    background: url(https://info.bingomore.com/wordpress/favita/assets/images/bg-header.jpg)
+      no-repeat 85% top;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main-logo h1 {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  #header-page .content-head {
+    background: url(https://info.bingomore.com/wordpress/favita/assets/images/bg-header.jpg)
+      no-repeat left bottom;
+  }
+  .main-logo h1 > a {
+    margin-top: 0;
+    float: unset !important;
+  }
+  .main-logo {
+    padding-bottom: 200px;
+  }
+  .main-logo h2 {
+    font-size: 30px;
+  }
+  .main-logo h1 {
+    text-align: center;
+    padding-bottom: 65px;
+  }
+  .main-logo h1 .button a {
+    margin-top: 40px;
+    float: unset !important;
+  }
+}
+
+@media (max-width: 991px) {
+  #header-page .content-head {
+    padding: 0;
+  }
+  .main-logo {
+    padding-bottom: 500px;
+  }
+}
+
+@media (max-width: 450px) {
+  .row-icon {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .row-contant {
+    float: left;
+  }
 }
